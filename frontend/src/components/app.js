@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import '../styles/App.scss';
+import '../../styles/App.scss';
 
 const Index = () => <p>Index</p>
 const About = () => <p>About</p>
