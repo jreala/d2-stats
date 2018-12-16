@@ -1,37 +1,83 @@
 {
+    "extends": [
+        "airbnb-base",
+        "plugin:react/recommended",
+        "plugin:jest/recommended",
+        "plugin:import/errors",
+        "plugin:import/warnings"
+    ],
     "env": {
         "browser": true,
         "commonjs": true,
         "es6": true,
         "node": true
     },
-    "extends": "eslint:recommended",
+    "parser": "babel-eslint",
     "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
         "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": 2018,
-        "sourceType": "module"
+            "jsx": true,
+            "experimentalObjectRestSpread": true
+        }
+    },
+    "rules": {
+        "no-array-constructor": 2,
+        "no-new-object": 2,
+        "no-param-reassign": 0,
+        "indent": [
+            2,
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "no-underscore-dangle": 0,
+        "class-methods-use-this": 0,
+        "import/no-absolute-path": 0,
+        "no-multiple-empty-lines": 0,
+        "comma-dangle": 0,
+        "no-nested-ternary": 0,
+        "guard-for-in": 0,
+        "eqeqeq": 0,
+        "global-require": 0,
+        "quotes": [
+            2,
+            "single",
+            {
+                "avoidEscape": true
+            }
+        ],
+        "vars-on-top": 2,
+        "max-len": 0,
+        "no-restricted-syntax": [
+            "error",
+            "LabeledStatement",
+            "WithStatement"
+        ],
+        "no-trailing-spaces": 0,
+        "default-case": 0,
+        "one-var": 0,
+        "no-plusplus": 0,
+        "no-void": 0,
+        "consistent-return": 0,
+        "import/no-extraneous-dependencies": 0,
+        "import/no-unresolved": 0,
+        "spaced-comment": 0,
+        "object-curly-newline": 0,
+        "function-paren-newline": 0,
+        "prefer-destructuring": 0,
+        "padded-blocks": [
+            "error",
+            {
+                "classes": "always"
+            }
+        ]
+    },
+    "globals": {
+        "Promise": false
     },
     "plugins": [
         "react"
-    ],
-    "rules": {
-        "indent": [
-            "error",
-            4
-        ],
-        "linebreak-style": [
-            "error",
-            "unix"
-        ],
-        "quotes": [
-            "error",
-            "single"
-        ],
-        "semi": [
-            "error",
-            "always"
-        ]
-    }
+    ]
 }
