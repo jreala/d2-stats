@@ -5,5 +5,5 @@ const express = require('express'),
 app.listen(port, () => console.log(`Listening on port ${port}`));
 
 app.get('/api/test', (req, res) => {
-    res.send({ express: '\n\nTesting the endpoint...\n\n'});
+    res.send({ express: '\n\nTesting the endpoint...\n\n' });
 });

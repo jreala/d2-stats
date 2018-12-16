@@ -2,7 +2,6 @@
     "extends": [
         "airbnb-base",
         "plugin:react/recommended",
-        "plugin:jest/recommended",
         "plugin:import/errors",
         "plugin:import/warnings"
     ],
@@ -41,6 +40,8 @@
         "guard-for-in": 0,
         "eqeqeq": 0,
         "global-require": 0,
+        "linebreak-style": 0,
+        "eslint linebreak-style": [0, "error", "windows"],
         "quotes": [
             2,
             "single",
