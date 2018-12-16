@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import '../../styles/App.scss';
 
 const Index = () => <p>Index</p>;
@@ -38,6 +38,7 @@ class App extends Component {
             </div>
         );
     }
+
 }
 
 export default App;
