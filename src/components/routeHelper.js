@@ -2,22 +2,6 @@ import React from 'react';
 import map from 'lodash/map';
 import { Route, Link, Switch } from 'react-router-dom';
 
-const IndexPage = () => <p>Index</p>;
-const AboutPage = () => <p>About</p>;
-const TokenPage = () => {
-    localStorage.setItem('d2-stats-auth', 'peanutbutter');
-    window.close();
-    return (
-        <p>If the page does not close automatically, you may do so now</p>
-    );
-};
-
-const Registry = {
-    IndexPage,
-    AboutPage,
-    TokenPage
-};
-
 /**
  * Build Routes from Object[]
  * @param {Object[]} data
@@ -25,12 +9,13 @@ const Registry = {
  * @param {string} data[].path
  * @param {string} data[].component
  * @param {boolean} data[].exact
+ * @returns {Route[]}
  */
 export const Routes = data => map(data, route => (
     <Route key={route.component}
         exact={!!route.exact}
         path={route.path}
-        component={Registry[route.component]}
+        component={route.component}
     />
 ));
 
@@ -39,11 +24,12 @@ export const Routes = data => map(data, route => (
  * @param {Object[]} data
  * @param {string} data[].displayName
  * @param {string} data[].path
+ * @returns {Link[]} - Unordered list of Links
  */
 export const Links = data => (
     <ul>
         {map(data, route => (
-            <li>
+            <li key={route.displayName}>
                 <Link to={route.path}>{route.displayName}</Link>
             </li>
         ))}
@@ -53,6 +39,7 @@ export const Links = data => (
 /**
  * Wrap routes inside a Switch
  * @param {Route[]} routes
+ * @returns {Switch}
  */
 export const Switchify = routes => (
     <Switch>
