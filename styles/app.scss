@@ -10,6 +10,14 @@ h1 {
     text-align: center;
 }
 
+.inline {
+    display: inline;
+}
+
+.no-text-decoration {
+    text-decoration: none;
+}
+
 .margin-left-8 {
     margin-left: 8px;
 }
@@ -79,7 +87,7 @@ h1 {
 }
 
 .grow {
-    flex: 1
+    flex-grow: 1;
 }
 
 .center-justify {
@@ -100,4 +108,10 @@ h1 {
 .space-evenly {
     display: flex;
     justify-content: space-evenly;
+}
+
+.no-format-ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }

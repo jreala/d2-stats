@@ -1,5 +1,6 @@
 import React from 'react';
 import map from 'lodash/map';
+import filter from 'lodash/filter';
 import { Route, Link, Switch } from 'react-router-dom';
 
 /**
@@ -24,13 +25,17 @@ export const Routes = data => map(data, route => (
  * @param {Object[]} data
  * @param {string} data[].displayName
  * @param {string} data[].path
+ * @param {Object} styles
+ * @param {string} styles.ul
+ * @param {string} styles.li
+ * @param {string} styles.a
  * @returns {Link[]} - Unordered list of Links
  */
-export const Links = data => (
-    <ul>
-        {map(data, route => (
-            <li key={route.displayName}>
-                <Link to={route.path}>{route.displayName}</Link>
+export const Links = (data, styles) => (
+    <ul className={styles.ul || ''}>
+        {map(filter(data, route => !route.hidden), route => (
+            <li key={route.displayName} className={styles.li || ''}>
+                <Link className={styles.a || ''} to={route.path}>{route.displayName}</Link>
             </li>
         ))}
     </ul>

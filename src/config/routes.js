@@ -18,7 +18,8 @@ const routes = [
     {
         displayName: 'Token',
         path: '/token',
-        component: TokenPage
+        component: TokenPage,
+        hidden: true
     }
 ];
 

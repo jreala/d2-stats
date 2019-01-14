@@ -1,6 +1,6 @@
 import assign from 'lodash/assign';
 import createAction from '../../../store/helpers/createAction';
-import { ACTION_SEARCH_PLAYER } from '../../../constants';
+import { ACTION_SEARCH_PLAYER } from '../../../lib/constants';
 
 const notifySearchAccount = payload => createAction(ACTION_SEARCH_PLAYER, payload);
 

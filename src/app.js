@@ -1,17 +1,14 @@
 import React, { Component } from 'react';
-import '../../styles/App.scss';
-import { authorize, } from '../client';
-import routes from '../config/routes';
-import { Routes, Switchify, Links } from './routeHelper';
+import '../styles/app.scss';
+import { authorize, } from './lib/client';
+import Header from './components/header';
 
 class App extends Component {
 
     render() {
         return (
             <div>
-                <h1>Destiny 2 Stats</h1>
-                {Links(routes)}
-                {Switchify(Routes(routes))}
+                <Header />
                 <p>Welp</p>
                 <p>{process.env.API_KEY}</p>
                 <button onClick={authorize}>Authorize Me</button>
