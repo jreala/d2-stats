@@ -5,13 +5,13 @@ export default class StatCard extends React.Component {
 
     static get propTypes() {
         return {
-            onSearch: PropTypes.func
+            search: PropTypes.func
         };
     }
 
     render() {
         return (
-            <p onClick={() => console.log(this.props)}>I am the best around bitches</p>
+            <p onClick={() => this.props.search('terms of searching')}>I am the best around bitches</p>
         );
     }
 
