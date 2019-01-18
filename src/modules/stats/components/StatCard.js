@@ -11,7 +11,7 @@ export default class StatCard extends React.Component {
 
     render() {
         return (
-            <p onClick={() => this.props.search('terms of searching')}>I am the best around bitches</p>
+            <p className='panel-background panel-border primary-text-color' onClick={() => this.props.search('terms of searching')}>I am the best around bitches</p>
         );
     }
 

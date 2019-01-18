@@ -15,7 +15,7 @@ export default class Header extends React.Component {
     render() {
         return (
             <div className='header inline-flex full-width padding-left-8 padding-right-8'>
-                <h1 className='no-padding no-margin grow max-width-120 primary-text-color'>D2 Stats</h1>
+                <h1 className='no-padding no-margin grow max-width-136 primary-text-color'>D2 Stats</h1>
                 {Links(routes, this.__linkStyles())}
             </div>
         );
