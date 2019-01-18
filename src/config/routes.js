@@ -1,7 +1,8 @@
 // Import the container if props and state need to be bound
 import About from '../modules/about/components';
 import StatCard from '../modules/stats/containers';
-import TokenPage from '../modules/token/components/token';
+import TokenPage from '../modules/token/components';
+import SupportUs from '../modules/supportUs/components';
 
 const routes = [
     {
@@ -14,6 +15,11 @@ const routes = [
         displayName: 'Stats',
         path: '/stats',
         component: StatCard
+    },
+    {
+        displayName: 'Support Us',
+        path: '/support-us',
+        component: SupportUs
     },
     {
         displayName: 'Token',
