@@ -9,13 +9,13 @@ export default class StatCard extends React.Component {
         return {
             fetchAccount: PropTypes.func,
             updateInput: PropTypes.func,
-            input: PropTypes.string
+            input: PropTypes.string,
+            isFetching: PropTypes.bool
         };
     }
 
     __onChange(e) {
         this.props.updateInput(e.target.value);
-        console.log(e.target.value);
     }
 
     render() {
@@ -23,6 +23,7 @@ export default class StatCard extends React.Component {
             <div>
                 <p className='panel-background primary-text-color padding-24' onClick={() => this.props.fetchAccount(this.props.input, MembershipType.TigerBlizzard)}>I am the best around bitches</p>
                 {Input({ onChange: this.__onChange.bind(this) })}
+                {this.props.isFetching && <p>Loading suckaaa</p>}
             </div>
         );
     }
