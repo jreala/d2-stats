@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import StatCard from '../components/StatCard';
+import Stats from '../components';
 import fetchAccount from '../actions/fetchAccount';
 import updateInput from '../actions/updateInput';
 
@@ -14,4 +14,4 @@ const actionCreators = {
     updateInput
 };
 
-export default connect(mapStateToProps, actionCreators)(StatCard);
+export default connect(mapStateToProps, actionCreators)(Stats);

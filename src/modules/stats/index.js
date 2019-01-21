@@ -1,4 +1,4 @@
-import StatCard from './components/StatCard';
+import Stats from './components';
 import reducers from './reducers';
 
-export { StatCard, reducers };
+export { Stats, reducers };

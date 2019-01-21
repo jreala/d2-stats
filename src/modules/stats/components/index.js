@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import MembershipType from '../../../models/BungieMembershipType';
 import Input from '../../../components/input';
 
-export default class StatCard extends React.Component {
+export default class Stats extends React.Component {
 
     static get propTypes() {
         return {
