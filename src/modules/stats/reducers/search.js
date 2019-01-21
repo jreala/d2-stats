@@ -1,9 +1,10 @@
 const search = (state, action) => {
-    const payload = action.payload;
+    console.log(action);
+    const data = action.data;
 
     return {
         ...state,
-        payload
+        data
     };
 };
 
