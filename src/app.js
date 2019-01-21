@@ -12,8 +12,6 @@ class App extends Component {
             <div>
                 <Header />
                 {Switchify(Routes(routes))}
-                <p>Welp</p>
-                <p>{process.env.API_KEY}</p>
                 {/* <button onClick={authorize}>Authorize Me</button> */}
             </div>
         );
