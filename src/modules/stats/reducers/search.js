@@ -5,7 +5,9 @@ import { SUCCESS } from '../../../lib/constants';
 
 const parseData = (data) => {
     if (isEmpty(data)) {
-        return assign({}, data, { Valid: false });
+        return {
+            Valid: false,
+        };
     }
 
     if (data.ErrorStatus && data.ErrorStatus !== SUCCESS) {
@@ -23,6 +25,8 @@ const parseData = (data) => {
             Response: data.Response
         };
     }
+
+    return assign({}, data, { Valid: false });
 };
 
 const accountIsEqual = (account1, account2) => (
