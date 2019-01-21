@@ -22,7 +22,7 @@ $color-silver: #8492A6;
 $color-smoke: #E0E6ED;
 $color-dark-smoke: #D3DCE6;
 $color-extra-dark-smoke: #C0CCDA;
-$color-snow: #F9FAFC;
+$color-snow: rgba(249, 250, 252, .87);
 $color-dark-snow: #EFF2F7;
 $color-extra-dark-snow: #E5E9F2;
 
@@ -30,6 +30,7 @@ body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     background-color: $color-black;
+    color: $color-snow;
 }
 
 h1 {
