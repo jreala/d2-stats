@@ -21,7 +21,7 @@ module.exports = (env) => {
 
     return {
         target: 'web',
-        entry: './src/index.js',
+        entry: ['babel-polyfill', './src/index.js'],
         output: {
             path: path.resolve(__dirname, 'dist'),
             filename: 'index_bundle.js',

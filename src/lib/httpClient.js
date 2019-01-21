@@ -12,8 +12,9 @@ export default class HttpClient {
         };
     }
 
-    static get(url) {
-        return fetch(url, assign(this.__config, { method: 'get' })).then(data => data.json());
+    static async get(url) {
+        const data = await fetch(url, assign(this.__config, { method: 'get' }));
+        return data.json();
     }
 
 }
