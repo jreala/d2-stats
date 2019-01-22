@@ -1,8 +1,6 @@
-const updateInput = (state, action) => {
-    return {
-        ...state,
-        input: action.input
-    };
-};
+const updateInput = (state, action) => ({
+    ...state,
+    input: action.input
+});
 
 export default updateInput;

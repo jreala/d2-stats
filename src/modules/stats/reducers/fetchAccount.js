@@ -35,8 +35,7 @@ const accountIsEqual = (account1, account2) => (
     && account1.displayName === account2.displayName
 );
 
-const search = (state, action) => {
-    const isFetching = action.isFetching;
+const fetchAccount = (state, action) => {
     const data = parseData(action.data);
     const newState = assign({}, state);
 
@@ -45,9 +44,8 @@ const search = (state, action) => {
     }
 
     return {
-        ...newState,
-        isFetching
+        ...newState
     };
 };
 
-export default search;
+export default fetchAccount;
