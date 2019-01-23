@@ -9,11 +9,13 @@ export default class Stats extends React.Component {
 
     static get propTypes() {
         return {
-            accounts: PropTypes.array.isRequired,
+            accounts: PropTypes.object.isRequired,
             fetchAccount: PropTypes.func,
             updateInput: PropTypes.func,
             input: PropTypes.string,
-            isFetching: PropTypes.bool
+            isFetching: PropTypes.bool,
+            fetchAllData: PropTypes.func,
+            fetchProfile: PropTypes.func
         };
     }
 
@@ -32,7 +34,7 @@ export default class Stats extends React.Component {
     render() {
         return (
             <div>
-                <p className='panel-background primary-text-color padding-24' onClick={() => this.props.fetchAccount(this.props.input, MembershipType.TigerBlizzard)}>I am the best around bitches</p>
+                <p className='panel-background primary-text-color padding-24' onClick={() => this.props.fetchProfile(this.props.input, MembershipType.TigerBlizzard)}>I am the best around bitches</p>
                 {Input({ onChange: this.__onChange.bind(this) })}
                 {this.props.isFetching && <p>Loading suckaaa</p>}
                 {

@@ -29,14 +29,15 @@ const parseData = (data) => {
     return assign({}, data, { Valid: false });
 };
 
-const fetchAccount = (state, action) => {
+const fetchProfile = (state, action) => {
     const data = parseData(action.data);
     const newState = assign({}, state);
 
     if (data.Valid) {
         map(data.Response, (value) => {
-            newState.accounts[value.membershipId] = value;
-            newState.memberIdByName[encodeURIComponent(value.displayName).toLowerCase()] = value.membershipId;
+            console.log('Value in profile map', value);
+            // newState.profiles[value.membershipId] = value;
+            // newState.memberIdByName[encodeURIComponent(value.displayName).toLowerCase()] = value.membershipId;
         });
     }
 
@@ -45,4 +46,4 @@ const fetchAccount = (state, action) => {
     };
 };
 
-export default fetchAccount;
+export default fetchProfile;
