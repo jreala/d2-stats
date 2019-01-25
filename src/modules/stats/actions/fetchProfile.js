@@ -10,7 +10,7 @@ const fetchProfile = (membershipType, membershipId) => async (dispatch) => {
 
     dispatch(notifyFetchBegin({ isFetching: true, requestType: REQUEST_TYPE_PROFILE }));
 
-    const data = await HttpClient.get(`https://www.bungie.net/Platform/Destiny2/${membershipType}/Profile/${membershipId}?components=Profiles/`);
+    const data = await HttpClient.get(`https://www.bungie.net/Platform/Destiny2/${membershipType}/Profile/${membershipId}/?components=Profiles`);
 
     dispatch(notifyFetchDone({ isFetching: false, requestType: REQUEST_TYPE_PROFILE }));
     return dispatch(notifyFetchProfile({ data }));

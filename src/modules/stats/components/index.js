@@ -20,7 +20,7 @@ export default class Stats extends React.Component {
     }
 
     __onChange(e) {
-        this.props.updateInput(e.target.value);
+        this.props.updateInput(encodeURIComponent(e.target.value));
     }
 
     __createCards(accounts) {
@@ -34,7 +34,7 @@ export default class Stats extends React.Component {
     render() {
         return (
             <div>
-                <p className='panel-background primary-text-color padding-24' onClick={() => this.props.fetchProfile(this.props.input, MembershipType.TigerBlizzard)}>I am the best around bitches</p>
+                <p className='panel-background primary-text-color padding-24' onClick={() => this.props.fetchAllData(this.props.input, MembershipType.TigerBlizzard)}>I am the best around bitches</p>
                 {Input({ onChange: this.__onChange.bind(this) })}
                 {this.props.isFetching && <p>Loading suckaaa</p>}
                 {

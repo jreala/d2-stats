@@ -10,8 +10,7 @@ const fetchAccount = (accountName, membershipType) => async (dispatch) => {
 
     dispatch(notifyFetchBegin({ isFetching: true, requestType: REQUEST_TYPE_ACCOUNT }));
 
-    const sanitizedAccount = encodeURIComponent(accountName);
-    const data = await HttpClient.get(`https://www.bungie.net/Platform/Destiny2/SearchDestinyPlayer/${membershipType}/${sanitizedAccount}/`);
+    const data = await HttpClient.get(`https://www.bungie.net/Platform/Destiny2/SearchDestinyPlayer/${membershipType}/${accountName}/`);
 
     dispatch(notifyFetchDone({ isFetching: false, requestType: REQUEST_TYPE_ACCOUNT }));
     return dispatch(notifyFetchAccount({ data }));
