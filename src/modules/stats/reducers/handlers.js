@@ -3,12 +3,14 @@ import updateInput from './updateInput';
 import fetchBegin from './fetchBegin';
 import fetchDone from './fetchDone';
 import fetchProfile from './fetchProfile';
+import fetchCharacter from './fetchCharacter';
 import {
     ACTION_STATS_FETCH_ACCOUNT,
     ACTION_STATS_UPDATE_INPUT,
     ACTION_STATS_FETCH_BEGIN,
     ACTION_STATS_FETCH_DONE,
-    ACTION_STATS_FETCH_PROFILE
+    ACTION_STATS_FETCH_PROFILE,
+    ACTION_STATS_FETCH_CHARACTER
 } from '../../../lib/constants';
 
 
@@ -18,5 +20,6 @@ export default {
     [ACTION_STATS_UPDATE_INPUT]: updateInput,
     [ACTION_STATS_FETCH_BEGIN]: fetchBegin,
     [ACTION_STATS_FETCH_DONE]: fetchDone,
-    [ACTION_STATS_FETCH_PROFILE]: fetchProfile
+    [ACTION_STATS_FETCH_PROFILE]: fetchProfile,
+    [ACTION_STATS_FETCH_CHARACTER]: fetchCharacter
 };
