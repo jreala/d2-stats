@@ -5,5 +5,7 @@ export default createReducer({
     accounts: {},
     profiles: {},
     characters: {},
-    memberIdByName: {}
+    memberIdByName: {},
+    accountStats: {},
+    characterStats: {}
 }, handlers);
