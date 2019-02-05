@@ -1,10 +1,11 @@
+import assign from 'lodash/assign';
 import createAction from '../../../store/helpers/createAction';
-import { ACTION_STATS_FETCH_PROFILE, REQUEST_TYPE_PROFILE } from '../../../lib/constants';
+import { ACTION_STATS_FETCH_PROFILE, REQUEST_TYPE_PROFILE, FORMAT_TYPE_PROFILE } from '../../../lib/constants';
 import HttpClient from '../../../lib/httpClient';
 import { notifyFetchBegin } from './fetchBegin';
 import { notifyFetchDone } from './fetchDone';
 
-export const notifyFetchProfile = payload => createAction(ACTION_STATS_FETCH_PROFILE, payload);
+export const notifyFetchProfile = payload => createAction(ACTION_STATS_FETCH_PROFILE, assign(payload, { formatType: FORMAT_TYPE_PROFILE }));
 
 const fetchProfile = (membershipType, membershipId) => async (dispatch) => {
 

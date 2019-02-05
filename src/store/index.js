@@ -2,6 +2,10 @@ import { combineReducers, createStore, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 import logger from 'redux-logger';
 import reducers from '../modules';
+import formatStats from '../lib/middleware/formatStats';
+import formatCharacter from '../lib/middleware/formatCharacter';
+import formatAccount from '../lib/middleware/formatAccount';
+import formatProfile from '../lib/middleware/formatProfile';
 
 let store = null;
 
@@ -14,7 +18,11 @@ export default function init() {
         combineReducers(reducers),
         applyMiddleware(
             thunkMiddleware,
-            logger
+            logger,
+            formatStats,
+            formatCharacter,
+            formatAccount,
+            formatProfile
         )
     );
 

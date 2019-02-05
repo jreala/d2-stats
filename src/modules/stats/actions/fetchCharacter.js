@@ -1,11 +1,12 @@
 import isNil from 'lodash/isNil';
+import assign from 'lodash/assign';
 import createAction from '../../../store/helpers/createAction';
-import { ACTION_STATS_FETCH_CHARACTER, REQUEST_TYPE_CHARACTER } from '../../../lib/constants';
+import { ACTION_STATS_FETCH_CHARACTER, REQUEST_TYPE_CHARACTER, FORMAT_TYPE_CHARACTER } from '../../../lib/constants';
 import HttpClient from '../../../lib/httpClient';
 import { notifyFetchBegin } from './fetchBegin';
 import { notifyFetchDone } from './fetchDone';
 
-export const notifyFetchCharacter = payload => createAction(ACTION_STATS_FETCH_CHARACTER, payload);
+export const notifyFetchCharacter = payload => createAction(ACTION_STATS_FETCH_CHARACTER, assign(payload, { formatType: FORMAT_TYPE_CHARACTER }));
 
 const performRequest = (membershipType, membershipId, characterId) => (
     HttpClient.get(`https://www.bungie.net/Platform/Destiny2/${membershipType}/Profile/${membershipId}/Character/${characterId}/?components=Characters,CharacterInventories,CharacterProgressions,CharacterActivities,CharacterEquipment`)

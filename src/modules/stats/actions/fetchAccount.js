@@ -1,10 +1,11 @@
+import assign from 'lodash/assign';
 import createAction from '../../../store/helpers/createAction';
-import { ACTION_STATS_FETCH_ACCOUNT, REQUEST_TYPE_ACCOUNT } from '../../../lib/constants';
+import { ACTION_STATS_FETCH_ACCOUNT, REQUEST_TYPE_ACCOUNT, FORMAT_TYPE_ACCOUNT } from '../../../lib/constants';
 import HttpClient from '../../../lib/httpClient';
 import { notifyFetchBegin } from './fetchBegin';
 import { notifyFetchDone } from './fetchDone';
 
-export const notifyFetchAccount = payload => createAction(ACTION_STATS_FETCH_ACCOUNT, payload);
+export const notifyFetchAccount = payload => createAction(ACTION_STATS_FETCH_ACCOUNT, assign(payload, { formatType: FORMAT_TYPE_ACCOUNT }));
 
 const fetchAccount = (accountName, membershipType) => async (dispatch) => {
 
