@@ -1,20 +1,12 @@
 import assign from 'lodash/assign';
-import map from 'lodash/map';
-import HttpClient from '../../../lib/httpClient';
+import pick from 'lodash/pick';
 
 const fetchAccount = (state, action) => {
-    const data = HttpClient.validateData(action.data);
-
-    if (!data.Valid) {
-        return state;
-    }
-
     const newState = assign({}, state);
+    const accountData = pick(action, ['displayName', 'membershipId', 'membershipType']);
 
-    map(data.Response, (value) => {
-        newState.accounts[value.membershipId] = value;
-        newState.memberIdByName[encodeURIComponent(value.displayName).toLowerCase()] = value.membershipId;
-    });
+    newState.accounts[action.membershipId] = accountData;
+    newState.memberIdByName[encodeURIComponent(action.displayName).toLowerCase()] = action.membershipId;
 
     return {
         ...newState
