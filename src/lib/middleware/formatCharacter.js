@@ -26,7 +26,7 @@ const formatCharacter = store => next => (action) => {
         characterIds[characterId] = parsed[char].Response;
     }
 
-    return next(assign({}, rest, { data: characterIds }));
+    return next(assign({}, rest, { characters: characterIds }));
 };
 
 export default formatCharacter;
