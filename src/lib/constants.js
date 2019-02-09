@@ -21,3 +21,7 @@ export const FORMAT_TYPE_ACCOUNT = 'FORMAT_TYPE_ACCOUNT';
 
 // Text
 export const SUCCESS = 'Success';
+
+// Icons
+export const BATTLE_NET = 'battleNet';
+export const PLAYSTATION = 'playstation';
