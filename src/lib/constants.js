@@ -25,3 +25,4 @@ export const SUCCESS = 'Success';
 // Icons
 export const BATTLE_NET = 'battleNet';
 export const PLAYSTATION = 'playstation';
+export const XBOX = 'xbox';

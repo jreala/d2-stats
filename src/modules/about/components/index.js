@@ -5,7 +5,7 @@ export default class About extends React.Component {
 
     render() {
         return (
-            <Icon name='playstation' width={200} height={200} />
+            <Icon name='xbox' width={200} height={200} />
         );
     }
 

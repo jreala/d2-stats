@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { BATTLE_NET, PLAYSTATION } from '../../lib/constants';
-import BattleNet from './battleNet';
-import PlayStation from './playstation';
+import { BATTLE_NET, PLAYSTATION, XBOX } from '../../lib/constants';
+import * as Icons from './symbols';
 
 export default class Icon extends React.Component {
 
@@ -24,9 +23,11 @@ export default class Icon extends React.Component {
 
         switch (this.props.name) {
             case BATTLE_NET:
-                return <BattleNet {...props} />;
+                return <Icons.BattleNet {...props} />;
             case PLAYSTATION:
-                return <PlayStation {...props} />;
+                return <Icons.Playstation {...props} />;
+            case XBOX:
+                return <Icons.Xbox {...props} />;
             default:
                 return null;
         }
