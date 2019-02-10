@@ -26,3 +26,8 @@ export const SUCCESS = 'Success';
 export const BATTLE_NET = 'battleNet';
 export const PLAYSTATION = 'playstation';
 export const XBOX = 'xbox';
+export const Icons = {
+    BattleNet: BATTLE_NET,
+    Playstation: PLAYSTATION,
+    Xbox: XBOX
+};
