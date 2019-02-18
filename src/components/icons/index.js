@@ -10,7 +10,8 @@ export default class Icon extends React.Component {
             name: PropTypes.string.isRequired,
             width: PropTypes.number,
             height: PropTypes.number,
-            className: PropTypes.string
+            className: PropTypes.string,
+            onClick: PropTypes.func
         };
     }
 
@@ -18,7 +19,8 @@ export default class Icon extends React.Component {
         const props = {
             width: this.props.width,
             height: this.props.height,
-            className: this.props.className
+            className: this.props.className,
+            onClick: this.props.onClick
         };
 
         switch (this.props.name) {

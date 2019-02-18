@@ -5,7 +5,8 @@ export default class IconPlaystation extends Abstract {
 
     render() {
         return (
-            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+            <svg onClick={this.props.onClick}
+                xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                 width={this.props.width} height={this.props.height}
                 viewBox="0 0 32 32"
                 style={{ fill: this.props.fill }}>
