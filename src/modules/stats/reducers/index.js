@@ -7,5 +7,6 @@ export default createReducer({
     characters: {},
     memberIdByName: {},
     accountStats: {},
-    characterStats: {}
+    characterStats: {},
+    searchType: 4
 }, handlers);

@@ -7,6 +7,7 @@ import fetchDone from '../actions/fetchDone';
 import fetchProfile from '../actions/fetchProfile';
 import fetchAllData from '../actions/fetchAllData';
 import fetchCharacter from '../actions/fetchCharacter';
+import updateSearchType from '../actions/updateSearchType';
 
 const mapStateToProps = state => ({
     ...state.Stats
@@ -19,7 +20,8 @@ const actionCreators = {
     fetchDone,
     fetchProfile,
     fetchAllData,
-    fetchCharacter
+    fetchCharacter,
+    updateSearchType
 };
 
 export default connect(mapStateToProps, actionCreators)(Stats);

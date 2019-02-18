@@ -7,13 +7,14 @@ export default class StatCard extends React.Component {
         return {
             displayName: PropTypes.string.isRequired,
             membershipId: PropTypes.string.isRequired,
-            membershipType: PropTypes.number.isRequired
+            membershipType: PropTypes.number.isRequired,
+            className: PropTypes.string
         };
     }
 
     render() {
         return (
-            <div>
+            <div className={this.props.className}>
                 Name: {this.props.displayName}
                 Id: {this.props.membershipId}
                 Type: {this.props.membershipType}
