@@ -42,7 +42,7 @@ export default class Stats extends React.Component {
     }
 
     __createCards(accounts) {
-        return map(accounts, data => <StatCard className='panel-background primary-text-color padding-24' key={data.membershipId} displayName={data.displayName} membershipId={data.membershipId} membershipType={data.membershipType} />);
+        return map(accounts, data => <StatCard className='stat-card panel-background primary-text-color padding-24' key={data.membershipId} displayName={data.displayName} membershipId={data.membershipId} membershipType={data.membershipType} />);
     }
 
     __wrapChildren(elementType, children = [], props = {}) {
@@ -57,7 +57,7 @@ export default class Stats extends React.Component {
                 {this.__typeSelector()}
                 {this.props.isFetching && <p>Loading suckaaa</p>}
                 {
-                    !isEmpty(this.props.accounts) && this.__wrapChildren('div', this.__createCards(this.props.accounts), { className: 'cardContainer' })
+                    !isEmpty(this.props.accounts) && this.__wrapChildren('div', this.__createCards(this.props.accounts), { className: 'card-container' })
                 }
             </div>
         );

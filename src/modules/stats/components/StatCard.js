@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import PieChart from '../../../components/PieChart';
 
 export default class StatCard extends React.Component {
 
@@ -18,6 +19,7 @@ export default class StatCard extends React.Component {
                 Name: {this.props.displayName}
                 Id: {this.props.membershipId}
                 Type: {this.props.membershipType}
+                <PieChart />
             </div>
         );
     }
